@@ -8,13 +8,12 @@ export const useRequest = () => {
   const [responseData, setResponseData] = useState(null)
   const [method, setMethod] = useState<Method>('GET')
 
-  const send = async (url: string, data: any = null) => {
+  const send = async (url: string) => {
     setIsLoading(true)
     try {
       const response = await axios({
         method,
         url,
-        data,
       })
       setResponseData(response.data)
       setIsRequestError(false)
@@ -34,6 +33,5 @@ export const useRequest = () => {
     error,
     send,
     setMethod,
-    setResponseData,
   }
 }
