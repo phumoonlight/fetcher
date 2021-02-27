@@ -4,7 +4,7 @@ interface Props {
   data: any
 }
 
-export const ResponseContainer: React.FC<Props> = ({ url, data, method }) => (
+export const ResponseCard: React.FC<Props> = ({ url, data, method }) => (
   <div className="bg-white text-white p-4 rounded-lg m-4">
     <div className="bg-black p-4 flex justify-between items-center overflow-x-auto">
       <pre>
